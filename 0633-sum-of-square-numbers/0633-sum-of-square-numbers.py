@@ -1,12 +1,12 @@
-from math import sqrt
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
         left=0  
-        right = int(sqrt(c)) # this will make the code more efficient specially for larger values of c
+        right = int(c**(0.5)) # this will make the code more efficient specially for larger values of c
         while right >= left:
-            if right**2 + left**2 == c:
+            sum_of_squares = right**2 + left**2
+            if sum_of_squares == c:
                 return True
-            elif right**2 + left**2 > c:
+            elif sum_of_squares > c:
                 right -= 1
             else:
                 left += 1
