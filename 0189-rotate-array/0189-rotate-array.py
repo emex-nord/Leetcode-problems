@@ -13,6 +13,6 @@ class Solution:
         left_pointer=0
         mid_pointer=k%len(nums)
 
-        swiper(nums,left_pointer,right_pointer)
+        nums.reverse()
         swiper(nums,left_pointer,mid_pointer-1)
         swiper(nums,mid_pointer,right_pointer)
