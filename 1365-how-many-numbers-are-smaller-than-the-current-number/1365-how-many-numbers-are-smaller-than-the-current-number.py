@@ -3,7 +3,13 @@ class Solution:
         
         sorted_nums = sorted(nums)
         
+        count= {}
+        for i,val in enumerate(sorted_nums):
+            if val not in count:
+                count[val] = i
+
+
         for i, val in enumerate(nums):
-            nums[i] = sorted_nums.index(val) 
+            nums[i] = count[val]
         
         return nums
