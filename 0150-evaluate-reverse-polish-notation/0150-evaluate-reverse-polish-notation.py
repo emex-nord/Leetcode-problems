@@ -6,14 +6,14 @@ class Solution:
                 a = stack.pop()
                 b = stack.pop()
                 if token == "+":
-                    stack.append(int(b) + int(a))
+                    stack.append(b + a)
                 elif token == "-":
-                    stack.append(int(b) - int(a))
+                    stack.append(b- a)
                 elif token == "*":
-                    stack.append(int(b) * int(a))
+                    stack.append(b * a)
                 else:
-                    stack.append(int(b) / int(a))
+                    stack.append(int(b / a))
             else:
-                stack.append(token)
+                stack.append(int(token))
         
-        return int(stack[0])
+        return (stack[0])
